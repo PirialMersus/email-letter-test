@@ -1,0 +1,1002 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Email Gepur</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        width: 100% !important;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        margin: 0;
+        padding: 0;
+        line-height: 100%;
+      }
+
+      p {
+        margin: 0;
+        padding: 0;
+      }
+
+      [style*="Roboto"] {
+        font-family: "Roboto", arial, sans-serif !important;
+      }
+
+      img {
+        outline: none;
+        text-decoration: none;
+        border: none;
+        -ms-interpolation-mode: bicubic;
+        max-width: 100% !important;
+        margin: 0;
+        padding: 0;
+        display: block;
+      }
+
+      table td {
+        border-collapse: collapse;
+      }
+
+      table {
+        border-collapse: collapse;
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
+
+      .logo {
+      }
+
+      .title-td {
+        font-size: 20px;
+        line-height: 30px;
+        color: #302b2a;
+      }
+
+      .greetings-td {
+        font-family: Montserrat;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        color: #333333;
+      }
+
+      .hart-td {
+        padding-left: 24px;
+      }
+
+      .menuIcon-td {
+        padding-left: 24px;
+        padding-top: 2px;
+      }
+
+      .payment-tr {
+        border-top: 1px solid #f2d9d3;
+        border-bottom: 1px solid #f2d9d3;
+        border-left: 1px solid #f2d9d3;
+        border-right: 1px solid #f2d9d3;
+        border-radius: 4px;
+        /*//??????????????????????????????*/
+        }
+        .payment-tr >td {
+            padding-top: 26px;
+        }
+
+        .row-title {
+            font-family: Arial;
+            font-size: 18px;
+            line-height: 28px;
+            color: #333333;
+        }
+
+        .cart-number-title {
+            color: #828282;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        .cart-number-value {
+            color: #333333;
+            font-family: Roboto;
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        .confirm-button {
+            display: block;
+            color: #7f7873;
+            font-family: Arial;
+            font-size: 16px;
+            line-height: 24px;
+            text-decoration: none;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            /*border-radius: 8px;*/
+        /* 600 и 617 ????????????? */
+      }
+
+      .confirm-clarification {
+        color: #828282;
+        font-family: Roboto;
+        font-size: 14px;
+        line-height: 21px;
+      }
+      .recycle-bin-table {
+        border-bottom: 1px solid #f2d9d3;
+      }
+      .product-title {
+        color: #333333;
+        font-family: Roboto;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 24px;
+      }
+
+      .vendor-code {
+        color: #333333;
+        font-size: 14px;
+        line-height: 24px;
+      }
+      .droduct-price-crossed {
+        color: #828282;
+        font-family: Roboto;
+        font-size: 12px;
+        line-height: 16px;
+        text-decoration: line-through;
+      }
+      .droduct-price-finished {
+        color: #333333;
+        font-family: Roboto;
+        font-size: 14px;
+        line-height: 24px;
+      }
+      .adressColTitles {
+        font-family: Roboto;
+        font-size: 14px;
+        line-height: 16px;
+        color: #000000;
+        opacity: 0.5;
+      }
+      .adressColValues {
+        font-family: Roboto;
+        font-size: 14px;
+        line-height: 16px;
+        color: #333333;
+      }
+      .totalPayableTable {
+        border-top: 1px solid #f2d9d3;
+      }
+      .totalPayableTable_text {
+        font-family: Arial;
+        font-size: 18px;
+        line-height: 21px;
+        color: #333333;
+      }
+      .totalPayableTable_button {
+        display: block;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-decoration: none;
+        border-top: 1px solid #302b2a;
+        border-bottom: 1px solid #302b2a;
+        border-left: 1px solid #302b2a;
+        border-right: 1px solid #302b2a;
+        font-family: Montserrat;
+        font-size: 14px;
+        line-height: 20px;
+        color: #302b2a;
+      }
+      .footerTable_phone {
+        font-family: Roboto;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 28px;
+        color: #333333;
+      }
+      .footerTable_text {
+        font-family: Roboto;
+        font-size: 14px;
+        line-height: 28px;
+        color: #333333;
+      }
+      .shoppingListBlockLineAbove {
+        border-top: 1px solid #f2d9d3;
+      }
+      .shoppingListTable_title {
+        font-family: Roboto;
+        font-size: 14px;
+        line-height: 16px;
+        color: #000000;
+        opacity: 0.5;
+      }
+      .shoppingListTable_value {
+        font-family: Roboto;
+        font-size: 14px;
+        line-height: 16px;
+        color: #333333;
+      }
+    </style>
+  </head>
+
+  <body style="margin: 0; padding: 0">
+    <div
+      style="
+        font-size: 0px;
+        font-color: #ffffff;
+        opacity: 0;
+        visibility: hidden;
+        width: 0;
+        height: 0;
+        display: none;
+      "
+    >
+      Тестовое письмо
+    </div>
+    <table cellpadding="0" cellspacing="0" width="100%" bgcolor="#111111">
+      <tr>
+        <td>
+          <table
+            class="main table-1029"
+            cellpadding="0"
+            cellspacing="0"
+            width="1029"
+            align="center"
+            bgcolor="#ffffff"
+          >
+            <tr>
+              <td height="30" width="1029"></td>
+            </tr>
+            <tr>
+              <td class="logo" align="center">
+                <img
+                  src="https://gist.githubusercontent.com/PirialMersus/338d582e61a7ce3154bb3babfaeea6b0/raw/9ba90e44755b6de823a1a218c4fd8b58b75c1a11/header.svg"
+                  alt="header"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <table
+                  cellpadding="0"
+                  cellspacing="0"
+                  width="600"
+                  align="center"
+                  bgcolor="#ffffff"
+                >
+                  <tr>
+                    <td height="24" width="600" colspan="2"></td>
+                  </tr>
+                  <tr>
+                    <td class="hart-td" align="left" width="72">
+                      <img
+                        src="https://gist.githubusercontent.com/PirialMersus/9d11cb03057d12c764b8bf949708b017/raw/d61cf59e7a1186108a56731ad92df46b38047d70/heart.svg"
+                        alt="hart"
+                      />
+                    </td>
+                    <td class="title-td">Обновление счета заказа</td>
+                  </tr>
+                  <tr>
+                    <td height="26" width="600" colspan="2"></td>
+                  </tr>
+                  <tr>
+                    <td align="left" width="72"></td>
+                    <td class="greetings-td">
+                      Здравствуйте, Иванова Ивановна!<br />Заказ № 123456789 был
+                      обновлен
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="24" width="600" colspan="2"></td>
+                  </tr>
+                  <tr class="payment-tr">
+                    <td
+                      align="left"
+                      width="72"
+                      class="menuIcon-td"
+                      valign="top"
+                    >
+                      <img
+                        src="https://gist.githubusercontent.com/PirialMersus/33b494778fa110a30fb50b18360f1518/raw/0b560cb6eb5d5a8fbf0147b56681ec2c2dd8523c/menu-icon.svg"
+                        alt="menu-icon"
+                      />
+                    </td>
+                    <td width="540" align="left">
+                      <table
+                        cellpadding="0"
+                        cellspacing="0"
+                        width="528"
+                        align="left"
+                        class="test"
+                      >
+                        <tr>
+                          <td class="row-title">Реквизиты для оплаты</td>
+                        </tr>
+                        <tr>
+                          <td height="22" width="528"></td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <table
+                              cellpadding="0"
+                              cellspacing="0"
+                              width="504"
+                              align="left"
+                            >
+                              <tr>
+                                <td
+                                  class="cart-number-title"
+                                  align="left"
+                                  width="120"
+                                >
+                                  Номер карты:
+                                </td>
+                                <td
+                                  class="cart-number-value"
+                                  align="left"
+                                  width="384"
+                                >
+                                  4444 - 1111 - 4444 - 6453
+                                </td>
+                              </tr>
+                              <tr>
+                                <td
+                                  height="22"
+                                  width="120"
+                                  colspan="2"
+                                  width="504"
+                                ></td>
+                              </tr>
+                              <tr>
+                                <td
+                                  class="cart-number-title"
+                                  align="left"
+                                  width="120"
+                                >
+                                  Имя получателя:
+                                </td>
+                                <td
+                                  class="cart-number-value"
+                                  align="left"
+                                  width="384"
+                                >
+                                  Кузьмичева Евгения Гипюровна
+                                </td>
+                              </tr>
+                              <tr>
+                                <td
+                                  height="22"
+                                  width="120"
+                                  colspan="2"
+                                  width="504"
+                                ></td>
+                              </tr>
+                              <tr>
+                                <td
+                                  class="cart-number-title"
+                                  align="left"
+                                  width="120"
+                                >
+                                  Сумма к оплате:
+                                </td>
+                                <td
+                                  class="cart-number-value"
+                                  align="left"
+                                  width="384"
+                                >
+                                  3 996 грн
+                                </td>
+                              </tr>
+                              <tr>
+                                <td
+                                  height="28"
+                                  width="120"
+                                  colspan="2"
+                                  width="504"
+                                ></td>
+                              </tr>
+                              <tr bgcolor="#F2E4DC">
+                                <td colspan="2" width="504" align="center">
+                                  <a href="#" class="confirm-button"
+                                    >Подтвердить оплату</a
+                                  >
+                                </td>
+                              </tr>
+                              <tr>
+                                <td
+                                  height="10"
+                                  width="120"
+                                  colspan="2"
+                                  width="504"
+                                ></td>
+                              </tr>
+                              <tr>
+                                <td
+                                  height="38"
+                                  width="120"
+                                  colspan="2"
+                                  width="504"
+                                  align="center"
+                                  class="confirm-clarification"
+                                >
+                                  После оплаты по реквизитам, необходимо
+                                  подтвердить<br />
+                                  оплату в личном кабинете
+                                </td>
+                              </tr>
+                              <tr>
+                                <td
+                                  height="24"
+                                  width="120"
+                                  colspan="2"
+                                  width="504"
+                                ></td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="26" width="600" colspan="2"></td>
+                  </tr>
+                  <tr>
+                    <td
+                      align="left"
+                      width="72"
+                      class="menuIcon-td"
+                      valign="top"
+                    >
+                      <img src="./assets/bag-icon.svg" alt="menu-icon" />
+                    </td>
+                    <td width="540" align="left">
+                      <table
+                        cellpadding="0"
+                        cellspacing="0"
+                        width="504"
+                        align="left"
+                      >
+                        <tr>
+                          <td class="row-title">Корзина</td>
+                        </tr>
+                        <tr>
+                          <td height="16" width="504"></td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <table
+                              class="recycle-bin-table"
+                              cellpadding="0"
+                              cellspacing="0"
+                              width="504"
+                              align="left"
+                            >
+                              <tr>
+                                <td height="96" width="64">
+                                  <img
+                                    src="https://i.ibb.co/PGY2691/product-girl.png"
+                                    alt="product"
+                                  />
+                                </td>
+                                <td height="96" width="16" align="left"></td>
+                                <td height="96" width="424">
+                                  <table
+                                    cellpadding="0"
+                                    cellspacing="0"
+                                    width="424"
+                                    align="left"
+                                    height="96"
+                                  >
+                                    <tr>
+                                      <td
+                                        class="product-title"
+                                        colspan="2"
+                                        align="left"
+                                        height="22"
+                                      >
+                                        Пляжный комплект
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td
+                                        class="vendor-code"
+                                        align="left"
+                                        height="22"
+                                      >
+                                        Артикул: 143498
+                                      </td>
+                                      <td
+                                        align="right"
+                                        height="22"
+                                        class="droduct-price-crossed"
+                                      >
+                                        2 432 ₴
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td
+                                        align="left"
+                                        height="22"
+                                        class="vendor-code"
+                                      >
+                                        Белый: XS, 1 шт
+                                      </td>
+                                      <td
+                                        align="right"
+                                        height="22"
+                                        class="droduct-price-finished"
+                                      >
+                                        1 998 ₴
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td colspan="3" height="16"></td>
+                              </tr>
+                              <tr>
+                                <td height="96" width="64">
+                                  <img
+                                    src="https://i.ibb.co/PGY2691/product-girl.png"
+                                    alt="product"
+                                  />
+                                </td>
+                                <td height="96" width="16" align="left"></td>
+                                <td height="96" width="424">
+                                  <table
+                                    cellpadding="0"
+                                    cellspacing="0"
+                                    width="424"
+                                    align="left"
+                                    height="96"
+                                  >
+                                    <tr>
+                                      <td
+                                        class="product-title"
+                                        colspan="2"
+                                        align="left"
+                                        height="22"
+                                      >
+                                        Пляжный комплект
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td
+                                        class="vendor-code"
+                                        align="left"
+                                        height="22"
+                                      >
+                                        Артикул: 143498
+                                      </td>
+                                      <td
+                                        align="right"
+                                        height="22"
+                                        class="droduct-price-crossed"
+                                      ></td>
+                                    </tr>
+                                    <tr>
+                                      <td
+                                        align="left"
+                                        height="22"
+                                        class="vendor-code"
+                                      >
+                                        Синий: L, 1 шт
+                                      </td>
+                                      <td
+                                        align="right"
+                                        height="22"
+                                        class="droduct-price-finished"
+                                      >
+                                        1 998 ₴
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td colspan="3" height="24"></td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="16" width="504"></td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <table
+                              cellpadding="0"
+                              cellspacing="0"
+                              width="504"
+                              align="left"
+                            >
+                              <tr>
+                                <td
+                                  height="24"
+                                  width="120"
+                                  align="left"
+                                  class="adressColTitles"
+                                >
+                                  Адрес доставки:
+                                </td>
+                                <td
+                                  height="24"
+                                  width="384"
+                                  class="adressColValues"
+                                  align="left"
+                                >
+                                  Украина, г. Одесса, Новая Почта, отделение №72
+                                </td>
+                              </tr>
+                              <tr>
+                                <td colspan="2" height="8"></td>
+                              </tr>
+                              <tr>
+                                <td
+                                  height="24"
+                                  width="120"
+                                  align="left"
+                                  class="adressColTitles"
+                                >
+                                  Получатель:
+                                </td>
+                                <td
+                                  height="24"
+                                  width="384"
+                                  class="adressColValues"
+                                  align="left"
+                                >
+                                  Новикова Виктория Владимировна
+                                </td>
+                              </tr>
+                              <tr>
+                                <td colspan="2" height="8"></td>
+                              </tr>
+                              <tr>
+                                <td
+                                  height="24"
+                                  width="120"
+                                  align="left"
+                                  class="adressColTitles"
+                                >
+                                  Телефон:
+                                </td>
+                                <td
+                                  height="24"
+                                  width="384"
+                                  class="adressColValues"
+                                  align="left"
+                                >
+                                  +38 (050) 123 45 67
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="24" width="600" colspan="2"></td>
+                  </tr>
+                  <!-- /////////////////// -->
+                  <tr class="shoppingListBlockLineAbove">
+                    <td height="24" width="600" colspan="2"></td>
+                  </tr>
+                  <tr>
+                    <td
+                      align="left"
+                      width="72"
+                      class="menuIcon-td"
+                      valign="top"
+                    >
+                      <img
+                        src="https://i.ibb.co/kK8yZZp/checklist-24.png"
+                        alt="check-list-icon"
+                      />
+                    </td>
+                    <td width="540" align="left">
+                      <table
+                        cellpadding="0"
+                        cellspacing="0"
+                        width="504"
+                        align="left"
+                      >
+                        <tr>
+                          <td class="row-title">Итого</td>
+                        </tr>
+                        <tr>
+                          <td height="16" width="504"></td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <table
+                              class="shoppingListTable"
+                              cellpadding="0"
+                              cellspacing="0"
+                              width="504"
+                              align="left"
+                            >
+                              <tr>
+                                <td
+                                  class="shoppingListTable_title"
+                                  align="left"
+                                >
+                                  Доставка:
+                                </td>
+                                <td class="shoppingListTable_value">
+                                  Оплата при получении
+                                </td>
+                                <td
+                                  class="shoppingListTable_value"
+                                  align="right"
+                                >
+                                  40 ₴
+                                </td>
+                              </tr>
+                              <tr>
+                                <td colspan="3" height="15"></td>
+                              </tr>
+                              <tr>
+                                <td
+                                  class="shoppingListTable_title"
+                                  align="left"
+                                >
+                                  Сумма заказа:
+                                </td>
+                                <td class="shoppingListTable_value">11 ед</td>
+                                <td
+                                  class="shoppingListTable_value"
+                                  align="right"
+                                >
+                                  3996 ₴
+                                </td>
+                              </tr>
+                              <tr>
+                                <td colspan="3" height="15"></td>
+                              </tr>
+
+                              <tr>
+                                <td
+                                  class="shoppingListTable_title"
+                                  align="left"
+                                >
+                                  Скидка:
+                                </td>
+                                <td class="shoppingListTable_value">
+                                  Не распространяется на акционные товары
+                                </td>
+                                <td
+                                  class="shoppingListTable_value"
+                                  align="right"
+                                >
+                                  -100 ₴
+                                </td>
+                              </tr>
+                              <tr>
+                                <td colspan="3" height="15"></td>
+                              </tr>
+
+                              <tr>
+                                <td
+                                  class="shoppingListTable_title"
+                                  align="left"
+                                >
+                                  Бонусы:
+                                </td>
+                                <td class="shoppingListTable_value">
+                                  Оплачено бонусами
+                                </td>
+                                <td
+                                  class="shoppingListTable_value"
+                                  align="right"
+                                >
+                                  - 300
+                                </td>
+                              </tr>
+                              <tr>
+                                <td colspan="3" height="15"></td>
+                              </tr>
+
+                              <tr>
+                                <td
+                                  class="shoppingListTable_title"
+                                  align="left"
+                                >
+                                  Баланс:
+                                </td>
+                                <td class="shoppingListTable_value">
+                                  Оплачено с баланса
+                                </td>
+                                <td
+                                  class="shoppingListTable_value"
+                                  align="right"
+                                >
+                                  - 96 ₴
+                                </td>
+                              </tr>
+                              <tr>
+                                <td colspan="3" height="15"></td>
+                              </tr>
+
+                              <tr>
+                                <td
+                                  class="shoppingListTable_title"
+                                  align="left"
+                                >
+                                  Сертификат:
+                                </td>
+                                <td class="shoppingListTable_value">
+                                  Оплачено сертификатом
+                                </td>
+                                <td
+                                  class="shoppingListTable_value"
+                                  align="right"
+                                >
+                                  - 2000 ₴
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="24" width="504"></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <!-- ......................... -->
+                  <tr>
+                    <td width="600" align="center" colspan="2">
+                      <table
+                        cellpadding="0"
+                        cellspacing="0"
+                        width="568"
+                        align="center"
+                        class="totalPayableTable"
+                      >
+                        <tr>
+                          <td width="568" height="24" colspan="2"></td>
+                        </tr>
+                        <tr>
+                          <td align="left" class="totalPayableTable_text">
+                            Итого к оплате:
+                          </td>
+                          <td align="right" class="totalPayableTable_text">
+                            1 400 ₴
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="24" width="600" colspan="2"></td>
+                        </tr>
+                        <tr>
+                          <td colspan="2" align="center">
+                            <a href="#" class="totalPayableTable_button"
+                              >Мои заказы</a
+                            >
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="24" width="600" colspan="2"></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="600" colspan="2">
+                      <table
+                        cellpadding="0"
+                        cellspacing="0"
+                        width="600"
+                        align="center"
+                        bgcolor="#F2F2F2"
+                        class="footerTable"
+                      >
+                        <tr>
+                          <td height="24" width="600"></td>
+                        </tr>
+                        <tr>
+                          <td align="center" class="footerTable_phone">
+                            0 800 208 832
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td
+                            width="600"
+                            align="center"
+                            class="footerTable_text"
+                          >
+                            Телефон поддержки, бесплатно со всех номеров
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="24" width="600"></td>
+                        </tr>
+                        <tr>
+                          <td width="180" align="center">
+                            <table cellpadding="0" cellspacing="0" width="180">
+                              <tr>
+                                <td height="48" width="48" align="left">
+                                  <a href="#"
+                                    ><img
+                                      src="https://i.ibb.co/fF39sCT/telegram-icon.png"
+                                      alt="telegram"
+                                  /></a>
+                                </td>
+                                <td height="48" width="48" align="center">
+                                  <a href="#"
+                                    ><img
+                                      src="https://i.ibb.co/gvqvsJ7/whatsup-icon.png"
+                                      alt="whatsup"
+                                  /></a>
+                                </td>
+                                <td height="48" width="48" align="right">
+                                  <a href="#"
+                                    ><img
+                                      src="https://i.ibb.co/0ZSmWSF/viber-icon.png"
+                                      alt="viber"
+                                  /></a>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="24" width="600"></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="30" width="600" colspan="2"></td>
+                  </tr>
+                  <tr>
+                    <td align="left"></td>
+                    <td align="right" width="160">
+                      <table cellpadding="0" cellspacing="0" width="160">
+                        <tr>
+                          <td align="left">
+                            <a href="#">
+                              <img
+                                src="https://i.ibb.co/vxDW1BT/bx-bxl-vk.png"
+                                alt="vk-icon"
+                              />
+                            </a>
+                          </td>
+                          <td align="center">
+                            <a href="#">
+                              <img
+                                src="https://i.ibb.co/WGKQCPR/openmoji-youtube.png"
+                                alt="you-tube-icon"
+                              />
+                            </a>
+                          </td>
+                          <td align="right" style="padding-right: 3px">
+                            <a href="#">
+                              <img
+                                src="https://i.ibb.co/3yGTDxb/openmoji-instagram.png"
+                                alt="instagram-icon"
+                              />
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
