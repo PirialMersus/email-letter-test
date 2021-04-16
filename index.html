@@ -66,6 +66,10 @@
       .hart-td {
         padding-left: 25px;
       }
+      .hart-td img {
+        width: 24px;
+        height: 24px;
+      }
       .payment-tr {
         border-top: 1px solid #f2d9d3;
         border-bottom: 1px solid #f2d9d3;
@@ -73,12 +77,32 @@
       }
 
       .menuIcon-td {
-        padding-left: 4px;
+        padding-left: 6px;
         padding-top: 25px;
       }
+      .menuIcon-td img {
+        width: 24px;
+        height: 24px;
+      }
+
       .bag-icon {
         padding-left: 24px;
         padding-top: 2px;
+      }
+      .bag-icon img {
+        width: 24px;
+        height: 24px;
+      }
+      .confirm-button {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        /* line-height: 48px; */
+        color: #7f7873;
+        background-color: #f2e4dc;
+        display: block;
+        text-decoration: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
       }
       .cart-number-title {
         color: #828282;
@@ -126,6 +150,9 @@
 
       .recycle-bin-table {
         border-bottom: 1px solid #f2d9d3;
+      }
+      .recycle-td img {
+        width: ;
       }
 
       .product-title {
@@ -204,6 +231,10 @@
       .footerTable_socNetw_icon_vk {
         padding-left: 6px;
       }
+      .socialNetworksTable img {
+        height: 36px;
+        width: 36px;
+      }
       .footerTable_socNetw_icon_youtube {
         padding-left: 12px;
       }
@@ -225,6 +256,41 @@
         font-size: 14px;
         line-height: 16px;
         color: #333333;
+      }
+      .helpIcons-td > a > img {
+        height: 48px;
+        width: 48px;
+      }
+      @media (max-width: 870px) {
+        .table-1029 {
+          width: 600px !important;
+        }
+      }
+      @media (max-width: 610px) {
+        .table-600 {
+          width: 450px !important;
+        }
+        .table-600 td {
+          width: 450px !important;
+        }
+        .table-600 tr {
+          width: 450px !important;
+        }
+        .paymentDetailsTable {
+          width: 450px !important;
+        }
+        .table-560 {
+          width: 450px !important;
+        }
+        .table-560 td {
+          width: 450px !important;
+        }
+        .footerTable_main {
+          width: 450px !important;
+        }
+        .footerTable_main td {
+          width: 450px !important;
+        }
       }
     </style>
   </head>
@@ -276,7 +342,10 @@
                   </tr>
                   <tr>
                     <td class="hart-td" align="left" width="49" valign="top">
-                      <img src="https://i.ibb.co/312GL8b/hart.png" alt="hart" />
+                      <img
+                        src="https://i.ibb.co/tsV0MWR/hart-3x-22-17.png"
+                        alt="hart"
+                      />
                     </td>
                     <td valign="top">
                       <p
@@ -310,7 +379,12 @@
 
                   <tr>
                     <td colspan="2">
-                      <table cellpadding="0" cellspacing="0" width="600">
+                      <table
+                        cellpadding="0"
+                        cellspacing="0"
+                        width="600"
+                        class="paymentDetailsTable"
+                      >
                         <tr>
                           <td align="left" height="304" width="20">
                             <img
@@ -324,6 +398,7 @@
                               cellspacing="0"
                               width="560"
                               height="304"
+                              class="table-560"
                             >
                               <tr class="payment-tr">
                                 <td
@@ -333,7 +408,7 @@
                                   valign="top"
                                 >
                                   <img
-                                    src="https://gist.githubusercontent.com/PirialMersus/33b494778fa110a30fb50b18360f1518/raw/0b560cb6eb5d5a8fbf0147b56681ec2c2dd8523c/menu-icon.svg"
+                                    src="https://i.ibb.co/G7j8QHG/menu-icon25-3x.png"
                                     alt="menu-icon"
                                   />
                                 </td>
@@ -466,13 +541,13 @@
                                             <td
                                               colspan="2"
                                               width="504"
+                                              height="48"
                                               align="center"
+                                              style="border-radius: 8px"
                                             >
                                               <a href="#" class="confirm-button"
-                                                ><img
-                                                  src="https://i.ibb.co/VjPC7Nq/Default.jpg"
-                                                  alt="confirm payment button"
-                                              /></a>
+                                                >Подтвердить оплату</a
+                                              >
                                             </td>
                                           </tr>
                                           <tr>
@@ -529,7 +604,7 @@
                   <tr>
                     <td align="left" width="49" class="bag-icon" valign="top">
                       <img
-                        src="https://i.ibb.co/yNTfht4/bag-icon.png"
+                        src="https://i.ibb.co/d5YQ9cS/recycle24-3x.png"
                         alt="bag-icon"
                       />
                     </td>
@@ -838,7 +913,7 @@
                   <tr>
                     <td align="left" width="49" class="bag-icon" valign="top">
                       <img
-                        src="https://i.ibb.co/kK8yZZp/checklist-24.png"
+                        src="https://i.ibb.co/yVhnf3R/checklist-24-3x.png"
                         alt="check-list-icon"
                       />
                     </td>
@@ -1170,141 +1245,97 @@
                     <td height="24" width="600" colspan="2"></td>
                   </tr>
                   <tr>
-                    <td width="600" colspan="2">
+                    <td
+                      width="600"
+                      colspan="2"
+                      style="border-radius: 8px; background-color: #f2f2f2"
+                    >
                       <table
                         cellpadding="0"
                         cellspacing="0"
                         width="600"
                         align="center"
                         class="footerTable_main"
-                        bgcolor="#f7f8f8"
                       >
                         <tr>
-                          <td width="88" align="left">
-                            <table cellpadding="0" cellspacing="0" width="88">
-                              <tr>
-                                <td height="88" width="88">
-                                  <img
-                                    src="https://i.ibb.co/HKdG7kw/top-left.png"
-                                    alt="bgcolor"
-                                  />
-                                </td>
-                              </tr>
-                              <tr>
-                                <td height="88" width="88">
-                                  <img
-                                    src="https://i.ibb.co/JqgmmtV/bottom-left.png"
-                                    alt="bgcolor"
-                                  />
-                                </td>
-                              </tr>
-                            </table>
-                          </td>
-                          <td width="4"></td>
-                          <td width="420">
-                            <table
-                              cellpadding="0"
-                              cellspacing="0"
-                              width="420"
-                              align="center"
-                              class="footerTable_"
+                          <td height="24" width="600"></td>
+                        </tr>
+                        <tr>
+                          <td align="center">
+                            <p
+                              class="footerTable_phone"
+                              style="
+                                font-family: Arial, Helvetica, sans-serif,
+                                  'Arial';
+                              "
                             >
-                              <tr>
-                                <td height="24" width="420"></td>
-                              </tr>
-                              <tr>
-                                <td align="center">
-                                  <p
-                                    class="footerTable_phone"
-                                    style="
-                                      font-family: Arial, Helvetica, sans-serif,
-                                        'Arial';
-                                    "
-                                  >
-                                    0 800 208 832
-                                  </p>
-                                </td>
-                              </tr>
+                              0 800 208 832
+                            </p>
+                          </td>
+                        </tr>
 
-                              <tr>
-                                <td width="420" align="center">
-                                  <p
-                                    class="footerTable_text"
-                                    style="
-                                      font-family: Arial, Helvetica, sans-serif,
-                                        'Arial';
-                                    "
-                                  >
-                                    Телефон поддержки, бесплатно со всех номеров
-                                  </p>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td height="24" width="420"></td>
-                              </tr>
-                              <tr>
-                                <td width="180" align="center">
-                                  <table
-                                    cellpadding="0"
-                                    cellspacing="0"
-                                    width="176"
-                                  >
-                                    <tr>
-                                      <td height="48" width="49" align="left">
-                                        <a href="#"
-                                          ><img
-                                            src="https://i.ibb.co/fF39sCT/telegram-icon.png"
-                                            alt="telegram"
-                                        /></a>
-                                      </td>
-                                      <td height="48" width="48" align="center">
-                                        <a href="#"
-                                          ><img
-                                            src="https://i.ibb.co/gvqvsJ7/whatsup-icon.png"
-                                            alt="whatsup"
-                                        /></a>
-                                      </td>
-                                      <td height="48" width="48" align="right">
-                                        <a href="#"
-                                          ><img
-                                            src="https://i.ibb.co/0ZSmWSF/viber-icon.png"
-                                            alt="viber"
-                                        /></a>
-                                      </td>
-                                    </tr>
-                                  </table>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td height="24" width="420"></td>
-                              </tr>
-                            </table>
-                          </td>
-                          <td width="88" align="right">
-                            <table
-                              cellpadding="0"
-                              cellspacing="0"
-                              width="88"
-                              bgcolor="#F2F2F2"
+                        <tr>
+                          <td width="600" align="center">
+                            <p
+                              class="footerTable_text"
+                              style="
+                                font-family: Arial, Helvetica, sans-serif,
+                                  'Arial';
+                              "
                             >
+                              Телефон поддержки, бесплатно со всех номеров
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="24" width="600"></td>
+                        </tr>
+                        <tr>
+                          <td width="180" align="center">
+                            <table cellpadding="0" cellspacing="0" width="176">
                               <tr>
-                                <td height="88" width="88">
-                                  <img
-                                    src="https://i.ibb.co/L1B5PDf/top-right.png"
-                                    alt="bgcolor"
-                                  />
+                                <td
+                                  height="48"
+                                  width="48"
+                                  align="left"
+                                  class="helpIcons-td"
+                                >
+                                  <a href="#"
+                                    ><img
+                                      src="https://i.ibb.co/tXbDVmK/telegram-3x.png"
+                                      alt="telegram"
+                                  /></a>
                                 </td>
-                              </tr>
-                              <tr>
-                                <td height="88" width="88">
-                                  <img
-                                    src="https://i.ibb.co/tDNTfH2/bottom-right.png"
-                                    alt="bgcolor"
-                                  />
+                                <td
+                                  height="48"
+                                  width="48"
+                                  align="center"
+                                  class="helpIcons-td"
+                                >
+                                  <a href="#"
+                                    ><img
+                                      src="https://i.ibb.co/BTs96f6/whatsup-3x.png"
+                                      alt="whatsup"
+                                  /></a>
+                                </td>
+                                <td
+                                  height="48"
+                                  width="48"
+                                  align="right"
+                                  class="helpIcons-td"
+                                >
+                                  <a href="#"
+                                    ><img
+                                      src="https://i.ibb.co/2FjVB1f/viber-3x.png"
+                                      alt="viber"
+                                  /></a>
                                 </td>
                               </tr>
                             </table>
                           </td>
+                        </tr>
+                        <tr>
+                          <td height="24"></td>
                         </tr>
                       </table>
                     </td>
@@ -1315,12 +1346,17 @@
                   <tr>
                     <td align="left"></td>
                     <td align="right" width="160">
-                      <table cellpadding="0" cellspacing="0" width="160">
+                      <table
+                        cellpadding="0"
+                        cellspacing="0"
+                        width="160"
+                        class="socialNetworksTable"
+                      >
                         <tr>
                           <td align="left" class="footerTable_socNetw_icon_vk">
                             <a href="#">
                               <img
-                                src="https://i.ibb.co/vxDW1BT/bx-bxl-vk.png"
+                                src="https://i.ibb.co/pWP8F2P/vk-icon-3x.png"
                                 alt="vk-icon"
                               />
                             </a>
@@ -1331,7 +1367,7 @@
                           >
                             <a href="#">
                               <img
-                                src="https://i.ibb.co/WGKQCPR/openmoji-youtube.png"
+                                src="https://i.ibb.co/28s61nf/youtube-3x.png"
                                 alt="you-tube-icon"
                               />
                             </a>
@@ -1339,7 +1375,7 @@
                           <td align="right">
                             <a href="#">
                               <img
-                                src="https://i.ibb.co/3yGTDxb/openmoji-instagram.png"
+                                src="https://i.ibb.co/zZsy1Tq/instagram-3x.png"
                                 alt="instagram-icon"
                               />
                             </a>
