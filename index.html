@@ -44,8 +44,18 @@
         mso-table-rspace: 0pt;
       }
 
-      .logo {
+      /* .logo {
         box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.1);
+      } */
+      /* .logo img {
+        width: 135px;
+        height: 24px;
+      } */
+      .logo-600 {
+        display: none !important;
+      }
+      .logo-1029 {
+        display: table !important;
       }
 
       .title-td {
@@ -64,20 +74,24 @@
       }
 
       .hart-td {
-        padding-left: 25px;
+        /* padding-left: 25px; */
       }
       .hart-td img {
         width: 24px;
         height: 24px;
       }
-      .payment-tr {
+      .paymentTable {
+        display: block;
+        border-radius: 4px;
         border-top: 1px solid #f2d9d3;
         border-bottom: 1px solid #f2d9d3;
+        border-left: 1px solid #f2d9d3;
+        border-right: 1px solid #f2d9d3;
         /*//??????????????????????????????*/
       }
 
       .menuIcon-td {
-        padding-left: 6px;
+        /* padding-left: 6px; */
         padding-top: 25px;
       }
       .menuIcon-td img {
@@ -86,7 +100,6 @@
       }
 
       .bag-icon {
-        padding-left: 24px;
         padding-top: 2px;
       }
       .bag-icon img {
@@ -94,15 +107,15 @@
         height: 24px;
       }
       .confirm-button {
+        height: 48px;
+        line-height: 48px;
+        border-radius: 8px;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 16px;
-        /* line-height: 48px; */
         color: #7f7873;
         background-color: #f2e4dc;
         display: block;
         text-decoration: none;
-        padding-top: 10px;
-        padding-bottom: 10px;
       }
       .cart-number-title {
         color: #828282;
@@ -251,13 +264,32 @@
       .balance {
         padding-top: 1px;
       }
+      .totalPayableTable_button_table {
+        border-radius: 8px;
+        display: block;
+        border-top: 1px solid #302b2a;
+        border-bottom: 1px solid #302b2a;
+        border-left: 1px solid #302b2a;
+        border-right: 1px solid #302b2a;
+      }
       .shoppingListTable_value {
         font-family: Arial, Helvetica, sans-serif;
         font-size: 14px;
         line-height: 16px;
         color: #333333;
       }
-      .helpIcons-td > a > img {
+      .shoppingListTable_value_price {
+        max-width: 67px;
+      }
+      .helpIcons-tr {
+        text-align: center;
+      }
+      .helpIcons-tr a {
+        display: inline-block;
+        padding-right: 6px;
+        padding-left: 6px;
+      }
+      .helpIcons-tr a > img {
         height: 48px;
         width: 48px;
       }
@@ -265,31 +297,11 @@
         .table-1029 {
           width: 600px !important;
         }
-      }
-      @media (max-width: 610px) {
-        .table-600 {
-          width: 450px !important;
+        .logo-1029 {
+          display: none !important;
         }
-        .table-600 td {
-          width: 450px !important;
-        }
-        .table-600 tr {
-          width: 450px !important;
-        }
-        .paymentDetailsTable {
-          width: 450px !important;
-        }
-        .table-560 {
-          width: 450px !important;
-        }
-        .table-560 td {
-          width: 450px !important;
-        }
-        .footerTable_main {
-          width: 450px !important;
-        }
-        .footerTable_main td {
-          width: 450px !important;
+        .logo-600 {
+          display: table !important;
         }
       }
     </style>
@@ -323,13 +335,21 @@
             <tr>
               <td height="30" width="1029"></td>
             </tr>
-            <tr>
-              <td class="logo" align="center" width="1029" height="96">
-                <img src="https://i.ibb.co/GkDK6Lb/logo.png" alt="logo" />
+            <tr class="logo-1029">
+              <td align="center" width="1029" height="96">
+                <img src="https://i.ibb.co/yBKR7Lf/Header-3x.png" alt="logo" />
+              </td>
+            </tr>
+            <tr class="logo-600">
+              <td align="center" width="1029" height="96">
+                <img
+                  src="https://i.ibb.co/NVXJMLp/Header-600-3x.png"
+                  alt="logo"
+                />
               </td>
             </tr>
             <tr>
-              <td>
+              <td align="center">
                 <table
                   class="table-600"
                   cellpadding="0"
@@ -338,16 +358,16 @@
                   align="center"
                 >
                   <tr>
-                    <td height="30" width="600" colspan="2"></td>
+                    <td height="20" width="600" colspan="2"></td>
                   </tr>
                   <tr>
-                    <td class="hart-td" align="left" width="49" valign="top">
+                    <td class="hart-td" align="center" width="72" valign="top">
                       <img
                         src="https://i.ibb.co/tsV0MWR/hart-3x-22-17.png"
                         alt="hart"
                       />
                     </td>
-                    <td valign="top">
+                    <td>
                       <p
                         class="title-td"
                         style="font-family: Arial, Helvetica, sans-serif"
@@ -360,7 +380,7 @@
                     <td height="23" width="600" colspan="2"></td>
                   </tr>
                   <tr>
-                    <td align="left" width="49"></td>
+                    <td align="left" width="72"></td>
                     <td>
                       <p
                         class="greetings-td"
@@ -383,215 +403,191 @@
                         cellpadding="0"
                         cellspacing="0"
                         width="600"
-                        class="paymentDetailsTable"
+                        height="304"
+                        class="paymentTable"
                       >
                         <tr>
-                          <td align="left" height="304" width="20">
+                          <td
+                            align="center"
+                            width="72"
+                            class="menuIcon-td"
+                            valign="top"
+                          >
                             <img
-                              src="https://i.ibb.co/XYgSDkZ/border-left.png"
-                              alt="border-left"
+                              src="https://i.ibb.co/G7j8QHG/menu-icon25-3x.png"
+                              alt="menu-icon"
                             />
                           </td>
-                          <td height="302">
+                          <td width="528" align="left" valign="top">
                             <table
                               cellpadding="0"
                               cellspacing="0"
-                              width="560"
-                              height="304"
-                              class="table-560"
+                              width="528"
+                              align="left"
                             >
-                              <tr class="payment-tr">
+                              <tr>
+                                <td height="23"></td>
+                              </tr>
+                              <tr>
                                 <td
-                                  align="left"
-                                  width="52"
-                                  class="menuIcon-td"
-                                  valign="top"
+                                  class="row-title"
+                                  style="
+                                    font-family: Arial, Helvetica, sans-serif;
+                                  "
                                 >
-                                  <img
-                                    src="https://i.ibb.co/G7j8QHG/menu-icon25-3x.png"
-                                    alt="menu-icon"
-                                  />
+                                  Реквизиты для оплаты
                                 </td>
-                                <td width="508" align="left" valign="top">
+                              </tr>
+                              <tr>
+                                <td height="18"></td>
+                              </tr>
+                              <tr>
+                                <td>
                                   <table
                                     cellpadding="0"
                                     cellspacing="0"
-                                    width="508"
+                                    width="504"
                                     align="left"
                                   >
                                     <tr>
-                                      <td height="23"></td>
-                                    </tr>
-                                    <tr>
                                       <td
-                                        class="row-title"
+                                        class="cart-number-title"
+                                        align="left"
+                                        width="120"
                                         style="
                                           font-family: Arial, Helvetica,
                                             sans-serif;
                                         "
                                       >
-                                        Реквизиты для оплаты
+                                        Номер карты:
+                                      </td>
+                                      <td
+                                        class="cart-number-value"
+                                        align="left"
+                                        style="
+                                          font-family: Arial, Helvetica,
+                                            sans-serif;
+                                        "
+                                      >
+                                        4444 - 1111 - 4444 - 6453
                                       </td>
                                     </tr>
                                     <tr>
-                                      <td height="18"></td>
+                                      <td
+                                        height="8"
+                                        width="120"
+                                        colspan="2"
+                                        width="504"
+                                      ></td>
                                     </tr>
                                     <tr>
-                                      <td>
-                                        <table
-                                          cellpadding="0"
-                                          cellspacing="0"
-                                          width="504"
-                                          align="left"
+                                      <td
+                                        class="cart-number-title"
+                                        align="left"
+                                        width="120"
+                                        style="
+                                          font-family: Arial, Helvetica,
+                                            sans-serif;
+                                        "
+                                      >
+                                        Имя получателя:
+                                      </td>
+                                      <td
+                                        class="cart-number-value"
+                                        align="left"
+                                        style="
+                                          font-family: Arial, Helvetica,
+                                            sans-serif;
+                                        "
+                                      >
+                                        Кузьмичева Евгения Гипюровна
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td
+                                        height="8"
+                                        width="120"
+                                        colspan="2"
+                                        width="504"
+                                      ></td>
+                                    </tr>
+                                    <tr>
+                                      <td
+                                        class="cart-number-title"
+                                        align="left"
+                                        width="120"
+                                        style="
+                                          font-family: Arial, Helvetica,
+                                            sans-serif;
+                                        "
+                                      >
+                                        Сумма к оплате:
+                                      </td>
+                                      <td
+                                        class="cart-number-value"
+                                        align="left"
+                                        style="
+                                          font-family: Arial, Helvetica,
+                                            sans-serif;
+                                        "
+                                      >
+                                        3 996 грн
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td
+                                        height="24"
+                                        width="120"
+                                        colspan="2"
+                                        width="504"
+                                      ></td>
+                                    </tr>
+                                    <tr>
+                                      <td
+                                        colspan="2"
+                                        width="504"
+                                        height="48"
+                                        align="center"
+                                        style="border-radius: 8px"
+                                      >
+                                        <a href="#" class="confirm-button"
+                                          >Подтвердить оплату</a
                                         >
-                                          <tr>
-                                            <td
-                                              class="cart-number-title"
-                                              align="left"
-                                              width="120"
-                                              style="
-                                                font-family: Arial, Helvetica,
-                                                  sans-serif;
-                                              "
-                                            >
-                                              Номер карты:
-                                            </td>
-                                            <td
-                                              class="cart-number-value"
-                                              align="left"
-                                              style="
-                                                font-family: Arial, Helvetica,
-                                                  sans-serif;
-                                              "
-                                            >
-                                              4444 - 1111 - 4444 - 6453
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                            <td
-                                              height="8"
-                                              width="120"
-                                              colspan="2"
-                                              width="504"
-                                            ></td>
-                                          </tr>
-                                          <tr>
-                                            <td
-                                              class="cart-number-title"
-                                              align="left"
-                                              width="120"
-                                              style="
-                                                font-family: Arial, Helvetica,
-                                                  sans-serif;
-                                              "
-                                            >
-                                              Имя получателя:
-                                            </td>
-                                            <td
-                                              class="cart-number-value"
-                                              align="left"
-                                              style="
-                                                font-family: Arial, Helvetica,
-                                                  sans-serif;
-                                              "
-                                            >
-                                              Кузьмичева Евгения Гипюровна
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                            <td
-                                              height="8"
-                                              width="120"
-                                              colspan="2"
-                                              width="504"
-                                            ></td>
-                                          </tr>
-                                          <tr>
-                                            <td
-                                              class="cart-number-title"
-                                              align="left"
-                                              width="120"
-                                              style="
-                                                font-family: Arial, Helvetica,
-                                                  sans-serif;
-                                              "
-                                            >
-                                              Сумма к оплате:
-                                            </td>
-                                            <td
-                                              class="cart-number-value"
-                                              align="left"
-                                              style="
-                                                font-family: Arial, Helvetica,
-                                                  sans-serif;
-                                              "
-                                            >
-                                              3 996 грн
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                            <td
-                                              height="24"
-                                              width="120"
-                                              colspan="2"
-                                              width="504"
-                                            ></td>
-                                          </tr>
-                                          <tr bgcolor="#F2E4DC">
-                                            <td
-                                              colspan="2"
-                                              width="504"
-                                              height="48"
-                                              align="center"
-                                              style="border-radius: 8px"
-                                            >
-                                              <a href="#" class="confirm-button"
-                                                >Подтвердить оплату</a
-                                              >
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                            <td
-                                              height="8"
-                                              width="120"
-                                              colspan="2"
-                                              width="504"
-                                            ></td>
-                                          </tr>
-                                          <tr>
-                                            <td
-                                              height="38"
-                                              width="120"
-                                              colspan="2"
-                                              width="504"
-                                              align="center"
-                                              class="confirm-clarification"
-                                              style="
-                                                font-family: Arial, Helvetica,
-                                                  sans-serif;
-                                              "
-                                            >
-                                              После оплаты по реквизитам,
-                                              необходимо подтвердить<br />
-                                              оплату в личном кабинете
-                                            </td>
-                                          </tr>
-                                          <tr>
-                                            <td></td>
-                                          </tr>
-                                        </table>
                                       </td>
+                                    </tr>
+                                    <tr>
+                                      <td
+                                        height="8"
+                                        width="120"
+                                        colspan="2"
+                                        width="504"
+                                      ></td>
+                                    </tr>
+                                    <tr>
+                                      <td
+                                        height="38"
+                                        width="120"
+                                        colspan="2"
+                                        width="504"
+                                        align="center"
+                                        class="confirm-clarification"
+                                        style="
+                                          font-family: Arial, Helvetica,
+                                            sans-serif;
+                                        "
+                                      >
+                                        После оплаты по реквизитам, необходимо
+                                        подтвердить<br />
+                                        оплату в личном кабинете
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td></td>
                                     </tr>
                                   </table>
                                 </td>
                               </tr>
                             </table>
-                          </td>
-                          <td align="right" height="304" width="20">
-                            <img
-                              src="https://i.ibb.co/VQ0mcGs/border-right.png"
-                              alt="border-right"
-                            />
                           </td>
                         </tr>
                       </table>
@@ -601,217 +597,262 @@
                   <tr>
                     <td height="24" width="600" colspan="2"></td>
                   </tr>
+                  <!-- //////////////////////////// -->
                   <tr>
-                    <td align="left" width="49" class="bag-icon" valign="top">
-                      <img
-                        src="https://i.ibb.co/d5YQ9cS/recycle24-3x.png"
-                        alt="bag-icon"
-                      />
-                    </td>
-                    <td width="528" align="left">
+                    <td colspan="2">
                       <table
                         cellpadding="0"
                         cellspacing="0"
-                        width="504"
-                        align="left"
+                        width="600"
+                        class="recycleTable"
                       >
                         <tr>
-                          <td>
-                            <p
-                              class="row-title"
-                              style="
-                                font-family: Arial, Helvetica, sans-serif,
-                                  'Arial';
-                              "
-                            >
-                              Корзина
-                            </p>
+                          <td
+                            align="center"
+                            width="72"
+                            class="bag-icon"
+                            valign="top"
+                          >
+                            <img
+                              src="https://i.ibb.co/d5YQ9cS/recycle24-3x.png"
+                              alt="recycle"
+                            />
                           </td>
-                        </tr>
-
-                        <tr>
-                          <td height="16" width="504"></td>
-                        </tr>
-                        <tr>
-                          <td>
+                          <td width="528" align="left">
                             <table
-                              class="recycle-bin-table"
                               cellpadding="0"
                               cellspacing="0"
                               width="504"
                               align="left"
                             >
                               <tr>
-                                <td height="96" width="64">
-                                  <img
-                                    src="https://i.ibb.co/PGY2691/product-girl.png"
-                                    alt="product"
-                                  />
+                                <td>
+                                  <p
+                                    class="row-title"
+                                    style="
+                                      font-family: Arial, Helvetica, sans-serif,
+                                        'Arial';
+                                    "
+                                  >
+                                    Корзина
+                                  </p>
                                 </td>
-                                <td height="96" width="17" align="left"></td>
-                                <td height="96" width="424">
+                              </tr>
+
+                              <tr>
+                                <td height="16" width="504"></td>
+                              </tr>
+                              <tr>
+                                <td>
                                   <table
+                                    class="recycle-bin-table"
                                     cellpadding="0"
                                     cellspacing="0"
-                                    width="424"
+                                    width="504"
                                     align="left"
-                                    height="96"
                                   >
                                     <tr>
-                                      <td colspan="2" align="left" height="24">
-                                        <p
-                                          class="product-title"
-                                          style="
-                                            font-family: Arial, Helvetica,
-                                              sans-serif;
-                                          "
-                                        >
-                                          Пляжный комплект
-                                        </p>
+                                      <td height="96" width="64">
+                                        <img
+                                          src="https://i.ibb.co/PGY2691/product-girl.png"
+                                          alt="product"
+                                        />
                                       </td>
-                                    </tr>
+                                      <td
+                                        height="96"
+                                        width="17"
+                                        align="left"
+                                      ></td>
+                                      <td height="96" width="424">
+                                        <table
+                                          cellpadding="0"
+                                          cellspacing="0"
+                                          width="424"
+                                          align="left"
+                                          height="96"
+                                        >
+                                          <tr>
+                                            <td
+                                              colspan="2"
+                                              align="left"
+                                              height="24"
+                                            >
+                                              <p
+                                                class="product-title"
+                                                style="
+                                                  font-family: Arial, Helvetica,
+                                                    sans-serif;
+                                                "
+                                              >
+                                                Пляжный комплект
+                                              </p>
+                                            </td>
+                                          </tr>
 
-                                    <tr>
-                                      <td align="left" height="24">
-                                        <p
-                                          class="vendor-code"
-                                          style="
-                                            font-family: Arial, Helvetica,
-                                              sans-serif;
-                                          "
-                                        >
-                                          Артикул: 143498
-                                        </p>
-                                      </td>
-                                      <td align="right" height="24">
-                                        <p
-                                          class="product-price-crossed"
-                                          style="
-                                            font-family: Arial, Helvetica,
-                                              sans-serif;
-                                          "
-                                        >
-                                          2 432 ₴
-                                        </p>
+                                          <tr>
+                                            <td align="left" height="24">
+                                              <p
+                                                class="vendor-code"
+                                                style="
+                                                  font-family: Arial, Helvetica,
+                                                    sans-serif;
+                                                "
+                                              >
+                                                Артикул: 143498
+                                              </p>
+                                            </td>
+                                            <td align="right" height="24">
+                                              <p
+                                                class="product-price-crossed"
+                                                style="
+                                                  font-family: Arial, Helvetica,
+                                                    sans-serif;
+                                                "
+                                              >
+                                                2 432 ₴
+                                              </p>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td align="left" height="24">
+                                              <p
+                                                class="vendor-code"
+                                                style="
+                                                  font-family: Arial, Helvetica,
+                                                    sans-serif;
+                                                "
+                                              >
+                                                Белый: XS, 1 шт
+                                              </p>
+                                            </td>
+                                            <td align="right" height="24">
+                                              <p
+                                                class="product-price-finished"
+                                                style="
+                                                  font-family: Arial, Helvetica,
+                                                    sans-serif;
+                                                "
+                                              >
+                                                1 998 ₴
+                                              </p>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td colspan="2"></td>
+                                          </tr>
+                                        </table>
                                       </td>
                                     </tr>
                                     <tr>
-                                      <td align="left" height="24">
-                                        <p
-                                          class="vendor-code"
-                                          style="
-                                            font-family: Arial, Helvetica,
-                                              sans-serif;
-                                          "
-                                        >
-                                          Белый: XS, 1 шт
-                                        </p>
+                                      <td colspan="3" height="16"></td>
+                                    </tr>
+                                    <tr>
+                                      <td height="96" width="64">
+                                        <img
+                                          src="https://i.ibb.co/PGY2691/product-girl.png"
+                                          alt="product"
+                                        />
                                       </td>
-                                      <td align="right" height="24">
-                                        <p
-                                          class="product-price-finished"
-                                          style="
-                                            font-family: Arial, Helvetica,
-                                              sans-serif;
-                                          "
+                                      <td
+                                        height="96"
+                                        width="17"
+                                        align="left"
+                                      ></td>
+                                      <td height="96" width="424">
+                                        <table
+                                          cellpadding="0"
+                                          cellspacing="0"
+                                          width="424"
+                                          align="left"
+                                          height="96"
                                         >
-                                          1 998 ₴
-                                        </p>
+                                          <tr>
+                                            <td
+                                              colspan="2"
+                                              align="left"
+                                              height="24"
+                                            >
+                                              <p
+                                                class="product-title"
+                                                style="
+                                                  font-family: Arial, Helvetica,
+                                                    sans-serif;
+                                                "
+                                              >
+                                                Пляжный комплект
+                                              </p>
+                                            </td>
+                                          </tr>
+
+                                          <tr>
+                                            <td
+                                              align="left"
+                                              height="24"
+                                              colspan="2"
+                                            >
+                                              <p
+                                                class="vendor-code"
+                                                style="
+                                                  font-family: Arial, Helvetica,
+                                                    sans-serif;
+                                                "
+                                              >
+                                                Артикул: 143498
+                                              </p>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td align="left" height="24">
+                                              <p
+                                                class="vendor-code"
+                                                style="
+                                                  font-family: Arial, Helvetica,
+                                                    sans-serif;
+                                                "
+                                              >
+                                                Синий: L, 1 шт
+                                              </p>
+                                            </td>
+                                            <td align="right" height="24">
+                                              <p
+                                                class="product-price-finished"
+                                                style="
+                                                  font-family: Arial, Helvetica,
+                                                    sans-serif;
+                                                "
+                                              >
+                                                1 998 ₴
+                                              </p>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td colspan="2"></td>
+                                          </tr>
+                                        </table>
                                       </td>
                                     </tr>
                                     <tr>
-                                      <td colspan="2"></td>
+                                      <td colspan="3" height="22"></td>
                                     </tr>
                                   </table>
                                 </td>
-                              </tr>
-                              <tr>
-                                <td colspan="3" height="16"></td>
-                              </tr>
-                              <tr>
-                                <td height="96" width="64">
-                                  <img
-                                    src="https://i.ibb.co/PGY2691/product-girl.png"
-                                    alt="product"
-                                  />
-                                </td>
-                                <td height="96" width="17" align="left"></td>
-                                <td height="96" width="424">
-                                  <table
-                                    cellpadding="0"
-                                    cellspacing="0"
-                                    width="424"
-                                    align="left"
-                                    height="96"
-                                  >
-                                    <tr>
-                                      <td colspan="2" align="left" height="24">
-                                        <p
-                                          class="product-title"
-                                          style="
-                                            font-family: Arial, Helvetica,
-                                              sans-serif;
-                                          "
-                                        >
-                                          Пляжный комплект
-                                        </p>
-                                      </td>
-                                    </tr>
-
-                                    <tr>
-                                      <td align="left" height="24" colspan="2">
-                                        <p
-                                          class="vendor-code"
-                                          style="
-                                            font-family: Arial, Helvetica,
-                                              sans-serif;
-                                          "
-                                        >
-                                          Артикул: 143498
-                                        </p>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td align="left" height="24">
-                                        <p
-                                          class="vendor-code"
-                                          style="
-                                            font-family: Arial, Helvetica,
-                                              sans-serif;
-                                          "
-                                        >
-                                          Синий: L, 1 шт
-                                        </p>
-                                      </td>
-                                      <td align="right" height="24">
-                                        <p
-                                          class="product-price-finished"
-                                          style="
-                                            font-family: Arial, Helvetica,
-                                              sans-serif;
-                                          "
-                                        >
-                                          1 998 ₴
-                                        </p>
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td colspan="2"></td>
-                                    </tr>
-                                  </table>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td colspan="3" height="22"></td>
                               </tr>
                             </table>
                           </td>
                         </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <!-- ////////////////////////////////// -->
+                  <tr>
+                    <td colspan="2">
+                      <table cellpadding="0" cellspacing="0" width="600">
                         <tr>
-                          <td height="21" width="504"></td>
+                          <td height="21"></td>
                         </tr>
                         <tr>
-                          <td>
+                          <td width="72" align="left"></td>
+                          <td align="left">
                             <table
                               cellpadding="0"
                               cellspacing="0"
@@ -899,10 +940,13 @@
                               </tr>
                             </table>
                           </td>
+                          <td></td>
                         </tr>
                       </table>
                     </td>
                   </tr>
+                  <!-- ////////////////////////////////// -->
+
                   <tr>
                     <td height="20" width="600" colspan="2"></td>
                   </tr>
@@ -911,7 +955,7 @@
                     <td height="24" width="600" colspan="2"></td>
                   </tr>
                   <tr>
-                    <td align="left" width="49" class="bag-icon" valign="top">
+                    <td align="center" width="49" class="bag-icon" valign="top">
                       <img
                         src="https://i.ibb.co/yVhnf3R/checklist-24-3x.png"
                         alt="check-list-icon"
@@ -970,7 +1014,7 @@
                                 </td>
                                 <td align="right">
                                   <p
-                                    class="shoppingListTable_value"
+                                    class="shoppingListTable_value shoppingListTable_value_price"
                                     style="
                                       font-family: Arial, Helvetica, sans-serif,
                                         'Arial';
@@ -1008,7 +1052,7 @@
                                 </td>
                                 <td align="right">
                                   <p
-                                    class="shoppingListTable_value"
+                                    class="shoppingListTable_value shoppingListTable_value_price"
                                     style="
                                       font-family: Arial, Helvetica, sans-serif,
                                         'Arial';
@@ -1047,7 +1091,7 @@
                                 </td>
                                 <td align="right">
                                   <p
-                                    class="shoppingListTable_value"
+                                    class="shoppingListTable_value shoppingListTable_value_price"
                                     style="
                                       font-family: Arial, Helvetica, sans-serif,
                                         'Arial';
@@ -1086,7 +1130,7 @@
                                 </td>
                                 <td align="right">
                                   <p
-                                    class="shoppingListTable_value"
+                                    class="shoppingListTable_value shoppingListTable_value_price"
                                     style="
                                       font-family: Arial, Helvetica, sans-serif,
                                         'Arial';
@@ -1125,7 +1169,7 @@
                                 </td>
                                 <td align="right">
                                   <p
-                                    class="shoppingListTable_value balance"
+                                    class="shoppingListTable_value balance shoppingListTable_value_price"
                                     style="
                                       font-family: Arial, Helvetica, sans-serif,
                                         'Arial';
@@ -1164,7 +1208,7 @@
                                 </td>
                                 <td align="right">
                                   <p
-                                    class="shoppingListTable_value balance"
+                                    class="shoppingListTable_value balance shoppingListTable_value_price"
                                     style="
                                       font-family: Arial, Helvetica, sans-serif,
                                         'Arial';
@@ -1178,7 +1222,7 @@
                           </td>
                         </tr>
                         <tr>
-                          <td height="26" width="504"></td>
+                          <td height="23" width="504"></td>
                         </tr>
                       </table>
                     </td>
@@ -1233,12 +1277,31 @@
                     </td>
                   </tr>
                   <tr>
-                    <td colspan="2" class="my-orders-button" align="center">
-                      <a href="#" class="totalPayableTable_button"
-                        ><img
-                          src="https://i.ibb.co/Ldq4JGV/my-orders-button.png"
-                          alt="my-orders-button"
-                      /></a>
+                    <td colspan="2" align="center" width="600" height="48">
+                      <a href="#" style="text-decoration: none">
+                        <table
+                          cellpadding="0"
+                          cellspacing="0"
+                          width="568"
+                          align="center"
+                          height="48"
+                          class="totalPayableTable_button_table"
+                        >
+                          <tr>
+                            <td width="568" align="center" height="48">
+                              <p
+                                style="
+                                  font-family: Arial, Helvetica, sans-serif;
+                                  color: #302b2a;
+                                  font-size: 14px;
+                                "
+                              >
+                                Мои заказы
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                      </a>
                     </td>
                   </tr>
                   <tr>
@@ -1264,10 +1327,7 @@
                           <td align="center">
                             <p
                               class="footerTable_phone"
-                              style="
-                                font-family: Arial, Helvetica, sans-serif,
-                                  'Arial';
-                              "
+                              style="font-family: Arial, Helvetica, sans-serif"
                             >
                               0 800 208 832
                             </p>
@@ -1290,48 +1350,26 @@
                         <tr>
                           <td height="24" width="600"></td>
                         </tr>
-                        <tr>
-                          <td width="180" align="center">
-                            <table cellpadding="0" cellspacing="0" width="176">
-                              <tr>
-                                <td
-                                  height="48"
-                                  width="48"
-                                  align="left"
-                                  class="helpIcons-td"
-                                >
-                                  <a href="#"
-                                    ><img
-                                      src="https://i.ibb.co/tXbDVmK/telegram-3x.png"
-                                      alt="telegram"
-                                  /></a>
-                                </td>
-                                <td
-                                  height="48"
-                                  width="48"
-                                  align="center"
-                                  class="helpIcons-td"
-                                >
-                                  <a href="#"
-                                    ><img
-                                      src="https://i.ibb.co/BTs96f6/whatsup-3x.png"
-                                      alt="whatsup"
-                                  /></a>
-                                </td>
-                                <td
-                                  height="48"
-                                  width="48"
-                                  align="right"
-                                  class="helpIcons-td"
-                                >
-                                  <a href="#"
-                                    ><img
-                                      src="https://i.ibb.co/2FjVB1f/viber-3x.png"
-                                      alt="viber"
-                                  /></a>
-                                </td>
-                              </tr>
-                            </table>
+                        <tr class="helpIcons-tr">
+                          <!-- ////// -->
+                          <td>
+                            <a href="#"
+                              ><img
+                                src="https://i.ibb.co/tXbDVmK/telegram-3x.png"
+                                alt="telegram"
+                            /></a>
+
+                            <a href="#"
+                              ><img
+                                src="https://i.ibb.co/BTs96f6/whatsup-3x.png"
+                                alt="whatsup"
+                            /></a>
+
+                            <a href="#"
+                              ><img
+                                src="https://i.ibb.co/2FjVB1f/viber-3x.png"
+                                alt="viber"
+                            /></a>
                           </td>
                         </tr>
                         <tr>
@@ -1341,7 +1379,7 @@
                     </td>
                   </tr>
                   <tr>
-                    <td height="24" width="600" colspan="2"></td>
+                    <td height="21" width="600" colspan="2"></td>
                   </tr>
                   <tr>
                     <td align="left"></td>
