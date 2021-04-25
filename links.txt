@@ -1,5 +1,7 @@
 logo
-https://i.ibb.co/GkDK6Lb/logo.png
+https://i.ibb.co/yBKR7Lf/Header-3x.png
+logo-600
+https://i.ibb.co/NVXJMLp/Header-600-3x.png
 hart*3x
 https://i.ibb.co/tsV0MWR/hart-3x-22-17.png
 recycle*3x
@@ -42,3 +44,5 @@ vk
 https://i.ibb.co/pWP8F2P/vk-icon-3x.png
 insta
 https://i.ibb.co/zZsy1Tq/instagram-3x.png
+
+
